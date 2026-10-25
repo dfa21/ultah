@@ -73,7 +73,18 @@
         bottom: 15px;
     }
 }
+function openPage() {
+    document.getElementById('opening').classList.add('closed');
 
+    var music = document.getElementById('weddingMusic');
+    music.volume = 0.5;
+
+    music.play().catch(function(error) {
+        alert('Musik belum bisa diputar. Periksa file music/wedding.mp3.');
+    });
+
+    confetti();
+}
 </style>
 </head>
 <body>
